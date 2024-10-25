@@ -2,7 +2,7 @@
 {
     Console.WriteLine("введите число k:");
     int k = int.Parse(Console.ReadLine());
-    double summ = 0;
+    double W = 0;
     for (int i = -2; i <= k; i++)
     {
         if (i != 4)
@@ -13,10 +13,10 @@
                 factorial *= j;
             }
             double temp = (Math.Pow(-1, i) * factorial) / (i - 4);
-            summ += temp;
+            W += temp;
         }
     }
-    Console.WriteLine($"результат равен {summ:N2}");
+    Console.WriteLine($"результат равен {W:N2}");
 }
 catch
 {

@@ -12,9 +12,9 @@
         {
             factorial *= j;
         }
-        s += (Math.Acos(i * (Math.PI / 4))) * Math.Pow(x, i) / factorial;
+        s += (Math.Acos((i * (Math.PI / 4)*Math.PI/180))) * Math.Pow(x, i) / factorial;
     }
-    Console.WriteLine($"S = {s:N2}");
+    Console.WriteLine($"S = {s:F2}");
 }
 catch
 {

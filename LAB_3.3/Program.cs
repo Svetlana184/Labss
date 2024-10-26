@@ -12,7 +12,7 @@
         {
             factorial *= j;
         }
-        s += (Math.Cos((i * (Math.PI / 4)*Math.PI/180))) * Math.Pow(x, i) / factorial;
+        s += (Math.Cos((i * (Math.PI / 4)))) * Math.Pow(x, i) / factorial;
     }
     Console.WriteLine($"S = {s:F2}");
 }

@@ -37,7 +37,7 @@
             }
         }
     }
-    Console.WriteLine($"y(x)={y1:N2}\ny(x)={y2:N2}\ny(x)={y3:N2}");
+    Console.WriteLine($"y(x)={y1:F2}\ny(x)={y2:F2}\ny(x)={y3:F2}");
 }
 
 catch

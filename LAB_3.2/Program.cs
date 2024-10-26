@@ -16,7 +16,7 @@
             W += temp;
         }
     }
-    Console.WriteLine($"результат равен {W:N2}");
+    Console.WriteLine($"результат равен {W:F2}");
 }
 catch
 {

@@ -18,4 +18,3 @@ for (double x = -3; x <= 2.5; x += 1.1)
     Console.WriteLine($"|       {x,5:F2}       |       {y,5:F2}       |");
 }
 Console.WriteLine("└---------------------------------------┘");
-Console.WriteLine();

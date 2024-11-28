@@ -2,7 +2,7 @@
 {
     Console.WriteLine("Введите x:");
     double x = double.Parse(Console.ReadLine());
-    static double func_1(double x, double a, double b, double z)
+    double Func_1(double x, double a, double b, double z)
     {
         double y;
         if (x <= 5 *a) 
@@ -19,9 +19,9 @@
         }
         return y;
     }
-    Console.WriteLine($"y = {(func_1(x, 0.5, 4.5, Math.Pow(Math.E, 0.5 * x))):F2}");
-    Console.WriteLine($"y = {(func_1(x, 0.5, 3.7, Math.Pow(Math.E, 2 * 0.5 * x))):F2}");
-    Console.WriteLine($"y = {(func_1(x, 0.5, 2.7, Math.Pow(Math.E, 2.5 * 0.5 * x))):F2}");
+    Console.WriteLine($"y = {(Func_1(x, 0.5, 4.5, Math.Pow(Math.E, 0.5 * x))):F2}");
+    Console.WriteLine($"y = {(Func_1(x, 0.5, 3.7, Math.Pow(Math.E, 2 * 0.5 * x))):F2}");
+    Console.WriteLine($"y = {(Func_1(x, 0.5, 2.7, Math.Pow(Math.E, 2.5 * 0.5 * x))):F2}");
 }
 
 catch

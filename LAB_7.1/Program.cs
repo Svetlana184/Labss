@@ -1,15 +1,23 @@
-﻿
-Car[] cars = new Car[6];
-cars[0] = new Car("BMV", "Германия", 0.5, 2017, 2024);
-cars[1] = new Car("Kamaz", "Россия", 4, 2008, 2023);
-cars[2] = new Car("Peugeot", "Франция", 0.6, 2007, 2015);
-cars[3] = new Car("Kamaz", "Россия", 5, 2008, 2009);
-cars[4] = new Car("Belaz", "Беларуссия", 180, 2010, 2022);
-cars[5] = new Car("MG", "Англия", 0.4, 2005, 2016);
-
-for (int i = 0;  i < cars.Length; i++)
+﻿Car[] cars = new Car[3];
+for (int i = 0; i < cars.Length; i++)
 {
-    if (cars[i].Registration < 2023 && cars[i].Capacity > 3) cars[i].Print();
+    Console.WriteLine("введите марку машины");
+    string name = Console.ReadLine();
+    Console.WriteLine("Введите производителя");
+    string manufacturer = Console.ReadLine();
+    Console.WriteLine("выберите грузоподъемность");
+    int capacity = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите год выпуска");
+    int year = int.Parse(Console.ReadLine());
+    Console.WriteLine("введите дату регистрации");
+    DateTime registrationDate = DateTime.Parse(Console.ReadLine());
+    Car car = new Car(name, manufacturer, capacity, year, registrationDate);
+    cars[i] = car;
+}
+
+foreach (Car car in cars)
+{
+    if (DateTime.Now.Subtract(car.Registration).TotalDays > 365 && car.Capacity > 3) car.Print();
 }
 
 struct Car
@@ -18,8 +26,8 @@ struct Car
     public string Manufacturer;
     public double Capacity;
     public int Date;
-    public int Registration;
-    public Car(string brand, string manufacturer, double capacity, int date, int registration)
+    public DateTime Registration;
+    public Car(string brand, string manufacturer, double capacity, int date, DateTime registration)
     {
         Brand = brand;
         Manufacturer = manufacturer;
@@ -32,4 +40,4 @@ struct Car
         Console.WriteLine($"Марка автомобиля: {Brand}\nПроизводитель: {Manufacturer}\nГрузоподъемность: {Capacity}\nГод выпуска: {Date}\nДата регистрации: {Registration}\n");
     }
 }
- 
+
